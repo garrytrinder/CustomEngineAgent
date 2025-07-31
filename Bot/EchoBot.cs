@@ -7,26 +7,9 @@ namespace CustomEngineAgent.Bot;
 
 public class EchoBot : AgentApplication
 {
-    public EchoBot(AgentApplicationOptions options) : base(options)
-    {
-        OnConversationUpdate(ConversationUpdateEvents.MembersAdded, WelcomeMessageAsync);
+    public EchoBot(AgentApplicationOptions options) : base(options) { }
 
-        // Listen for ANY message to be received. MUST BE AFTER ANY OTHER MESSAGE HANDLERS
-        OnActivity(ActivityTypes.Message, OnMessageAsync);
-    }
-
-    [Route]
-    protected async Task WelcomeMessageAsync(ITurnContext turnContext, ITurnState turnState, CancellationToken cancellationToken)
-    {
-        foreach (ChannelAccount member in turnContext.Activity.MembersAdded)
-        {
-            if (member.Id != turnContext.Activity.Recipient.Id)
-            {
-                await turnContext.SendActivityAsync(MessageFactory.Text("Hello and Welcome!"), cancellationToken);
-            }
-        }
-    }
-
+    [Route(RouteType = RouteType.Activity, Type = ActivityTypes.Message, Rank = RouteRank.Last)]
     protected async Task OnMessageAsync(ITurnContext turnContext, ITurnState turnState, CancellationToken cancellationToken)
     {
         await turnContext.SendActivityAsync($"You said: {turnContext.Activity.Text}", cancellationToken: cancellationToken);
