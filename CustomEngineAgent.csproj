@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="M365Agent\env\.env.dev.user" />
+    <None Include="M365Agent\env\.env.local.user" />
+    <None Include="M365Agent\M365Agent.atkproj" />
+    <None Include="M365Agent\M365Agent.atkproj.user" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Agents.Authentication.Msal" Version="1.*" />
+    <PackageReference Include="Microsoft.Agents.Hosting.AspNetCore" Version="1.*" />
+  </ItemGroup>
+
+</Project>
