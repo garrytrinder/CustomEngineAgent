@@ -12,6 +12,9 @@ public class EchoBot : AgentApplication
     [Route(RouteType = RouteType.Activity, Type = ActivityTypes.Message, Rank = RouteRank.Last)]
     protected async Task OnMessageAsync(ITurnContext turnContext, ITurnState turnState, CancellationToken cancellationToken)
     {
-        await turnContext.SendActivityAsync($"You said: {turnContext.Activity.Text}", cancellationToken: cancellationToken);
+        await turnContext.StreamingResponse.QueueInformativeUpdateAsync("Working on it...", cancellationToken: cancellationToken);
+        turnContext.StreamingResponse.QueueTextChunk("You said: ");
+        turnContext.StreamingResponse.QueueTextChunk($"{turnContext.Activity.Text} [1]");
+        await turnContext.StreamingResponse.EndStreamAsync(cancellationToken);
     }
 }
