@@ -6,10 +6,10 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Include="M365Agent\env\.env.dev.user" />
-    <None Include="M365Agent\env\.env.local.user" />
-    <None Include="M365Agent\M365Agent.atkproj" />
-    <None Include="M365Agent\M365Agent.atkproj.user" />
+    <Compile Remove="M365Agent\**" />
+    <Content Remove="M365Agent\**" />
+    <EmbeddedResource Remove="M365Agent\**" />
+    <None Remove="M365Agent\**" />
   </ItemGroup>
 
   <ItemGroup>
