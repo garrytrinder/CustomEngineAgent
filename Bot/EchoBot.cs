@@ -13,6 +13,8 @@ public class EchoBot : AgentApplication
     protected async Task OnMessageAsync(ITurnContext turnContext, ITurnState turnState, CancellationToken cancellationToken)
     {
         await turnContext.StreamingResponse.QueueInformativeUpdateAsync("Working on it...", cancellationToken: cancellationToken);
+        int count = turnState.Conversation.IncrementMessageCount();
+        turnContext.StreamingResponse.QueueTextChunk($"({count}) ");
         turnContext.StreamingResponse.QueueTextChunk("You said: ");
         turnContext.StreamingResponse.QueueTextChunk($"{turnContext.Activity.Text} [1]");
         await turnContext.StreamingResponse.EndStreamAsync(cancellationToken);
