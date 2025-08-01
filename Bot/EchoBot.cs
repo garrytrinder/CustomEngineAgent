@@ -17,6 +17,9 @@ public class EchoBot : AgentApplication
         turnContext.StreamingResponse.QueueTextChunk($"({count}) ");
         turnContext.StreamingResponse.QueueTextChunk("You said: ");
         turnContext.StreamingResponse.QueueTextChunk($"{turnContext.Activity.Text} [1]");
+        turnContext.StreamingResponse.EnableGeneratedByAILabel = true;
+        var citation = new Citation(turnContext.Activity.Text, "Citation", "https://www.microsoft.com");
+        turnContext.StreamingResponse.AddCitations([citation]);
         await turnContext.StreamingResponse.EndStreamAsync(cancellationToken);
     }
 }
