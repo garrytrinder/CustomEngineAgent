@@ -25,12 +25,12 @@
   "bots": [
     {
       "botId": "${{BOT_ID}}",
-      "scopes": [ "copilot" ],
+      "scopes": [ "copilot", "personal", "team", "groupchat" ],
       "supportsFiles": false,
       "isNotificationOnly": false,
       "commandLists": [
         {
-          "scopes": [ "copilot" ],
+          "scopes": [ "copilot", "personal", "team", "groupchat" ],
           "commands": [
             {
               "title": "Hi",
