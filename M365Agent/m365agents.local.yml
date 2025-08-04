@@ -14,46 +14,86 @@ provision:
     writeToEnvironmentFile:
       teamsAppId: TEAMS_APP_ID
 
-  # Create or reuse an existing Microsoft Entra application for bot.
   - uses: aadApp/create
     with:
-      # The Microsoft Entra application's display name
-      name: CustomEngineAgent${{APP_NAME_SUFFIX}}
+      name: CustomEngineAgent-bot-${{APP_NAME_SUFFIX}}
       generateClientSecret: true
-      signInAudience: AzureADMultipleOrgs
+      signInAudience: AzureADMyOrg
     writeToEnvironmentFile:
-      # The Microsoft Entra application's client id created for bot.
       clientId: BOT_ID
-      # The Microsoft Entra application's client secret created for bot.
       clientSecret: SECRET_BOT_PASSWORD
-      # The Microsoft Entra application's object id created for bot.
       objectId: BOT_OBJECT_ID
+      tenantId: BOT_TENANT_ID
+      authority: BOT_AUTHORITY
+
+  - uses: aadApp/update
+    with:
+      manifestPath: ./infra/entra/entra.bot.manifest.json
+      outputFilePath : ./infra/entra/build/entra.bot.manifest.${{TEAMSFX_ENV}}.json
+  
+  - uses: aadApp/create
+    with:
+      name: CustomEngineAgent-graph-${{APP_NAME_SUFFIX}}
+      generateClientSecret: true
+      signInAudience: AzureADMyOrg
+    writeToEnvironmentFile:
+      clientId: GRAPH_ID
+      clientSecret: SECRET_GRAPH
+      objectId: GRAPH_OBJECT_ID
+      tenantId: GRAPH_TENANT_ID
+
+  - uses: aadApp/update
+    with:
+      manifestPath: ./infra/entra/entra.graph.manifest.json
+      outputFilePath : ./infra/entra/build/entra.graph.manifest.${{TEAMSFX_ENV}}.json
+
+  - uses: arm/deploy
+    with:
+      subscriptionId: ${{AZURE_SUBSCRIPTION_ID}}
+      resourceGroupName: ${{AZURE_RESOURCE_GROUP_NAME}}
+      templates:
+        - path: ./infra/local.azure.bicep
+          parameters: ./infra/local.azure.parameters.json
+          deploymentName: Create-resources-for-CustomEngineAgent
+      bicepCliVersion: v0.9.1
 
   # Generate runtime appsettings to JSON file
   - uses: file/createOrUpdateJsonFile
     with:
       target: ../appsettings.Development.json
       content:
+        AgentApplication:
+          StartTypingTimer: false
+          RemoveRecipientMention: false
+          NormalizeMentions: false
+          UserAuthorization:
+            DefaultHandlerName: me
+            AutoSignin: true
+            Handlers:
+              me:
+                Settings:
+                  AzureBotOAuthConnectionName: "Microsoft Graph"
+                  Title: "Sign in"
+                  Text: "Sign in to Microsoft Graph"
         TokenValidation:
           Audiences:
             ClientId: ${{BOT_ID}}
+          TenantId: ${{BOT_TENANT_ID}}
+        Logging:
+          LogLevel:
+            Default: Information
+            Microsoft.AspNetCore: Warning
+            Microsoft.Agents: Warning
+            Microsoft.Hosting.Lifetime: Information
         Connections:
           BotServiceConnection:
             Settings:
-              AuthType: "ClientSecret"
-              AuthorityEndpoint: "https://login.microsoftonline.com/botframework.com"
+              AuthType: ClientSecret
+              AuthorityEndpoint: ${{BOT_AUTHORITY}}
               ClientId: ${{BOT_ID}}
               ClientSecret: ${{SECRET_BOT_PASSWORD}}
-
-  # Create or update the bot registration on dev.botframework.com
-  - uses: botFramework/create
-    with:
-      botId: ${{BOT_ID}}
-      name: CustomEngineAgent
-      messagingEndpoint: ${{BOT_ENDPOINT}}/api/messages
-      description: ""
-      channels:
-        - name: msteams
+              Scopes:
+                - https://api.botframework.com/.default
 
   # Validate using manifest schema
   - uses: teamsApp/validateManifest
