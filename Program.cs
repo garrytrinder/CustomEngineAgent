@@ -3,6 +3,7 @@ using CustomEngineAgent.Bot;
 using Microsoft.Agents.Hosting.AspNetCore;
 using Microsoft.Agents.Storage;
 using Microsoft.Agents.Builder;
+using System.Diagnostics;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -26,7 +27,6 @@ builder.AddAgentApplicationOptions();
 
 // Add the bot (which is transient)
 builder.AddAgent<EchoBot>();
-builder.Services.AddSingleton<IStorage, MemoryStorage>();
 
 var app = builder.Build();
 
