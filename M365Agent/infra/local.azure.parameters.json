@@ -6,7 +6,7 @@
       "value": "bot${{RESOURCE_SUFFIX}}"
     },
     "botDisplayName": {
-      "value": "CustomEngineAgent"
+      "value": "${{APP_DISPLAY_NAME}} ${{APP_NAME_SUFFIX}}"
     },
     "botEntraAppClientId": {
       "value": "${{BOT_ID}}"

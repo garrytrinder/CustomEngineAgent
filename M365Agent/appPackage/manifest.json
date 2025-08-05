@@ -14,12 +14,12 @@
     "outline": "outline.png"
   },
   "name": {
-    "short": "CustomEngineAgent${{APP_NAME_SUFFIX}}",
-    "full": "full name for CustomEngineAgent"
+    "short": "${{APP_DISPLAY_NAME}} ${{APP_NAME_SUFFIX}}",
+    "full": "full name for ${{APP_DISPLAY_NAME}}"
   },
   "description": {
-    "short": "Short description of CustomEngineAgent",
-    "full": "Full description of CustomEngineAgent"
+    "short": "Short description of ${{APP_DISPLAY_NAME}}",
+    "full": "Full description of ${{APP_DISPLAY_NAME}}"
   },
   "accentColor": "#FFFFFF",
   "bots": [
