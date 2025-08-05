@@ -15,6 +15,7 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.Agents.Authentication.Msal" Version="1.*" />
     <PackageReference Include="Microsoft.Agents.Hosting.AspNetCore" Version="1.*" />
+    <PackageReference Include="Microsoft.Agents.Storage.Blobs" Version="1.1.151" />
   </ItemGroup>
 
 </Project>

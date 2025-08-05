@@ -94,6 +94,9 @@ provision:
               ClientSecret: ${{SECRET_BOT_PASSWORD}}
               Scopes:
                 - https://api.botframework.com/.default
+        BlobsStorageOptions:
+          ConnectionString: ${{BOT_STORAGE_CONNECTION_STRING}}
+          ContainerName: ${{BOT_STORAGE_CONTAINER_NAME}}
 
   # Validate using manifest schema
   - uses: teamsApp/validateManifest

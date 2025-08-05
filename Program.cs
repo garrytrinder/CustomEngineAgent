@@ -3,7 +3,7 @@ using CustomEngineAgent.Bot;
 using Microsoft.Agents.Hosting.AspNetCore;
 using Microsoft.Agents.Storage;
 using Microsoft.Agents.Builder;
-using System.Diagnostics;
+using Microsoft.Agents.Storage.Blobs;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -16,11 +16,9 @@ builder.Logging.AddConsole();
 // Add AspNet token validation
 builder.Services.AddBotAspNetAuthentication(builder.Configuration);
 
-// Register IStorage.  For development, MemoryStorage is suitable.
-// For production Agents, persisted storage should be used so
-// that state survives Agent restarts, and operate correctly
-// in a cluster of Agent instances.
-builder.Services.AddSingleton<IStorage, MemoryStorage>();
+builder.Services.AddSingleton<IStorage>((sp) => new BlobsStorage(
+    builder.Configuration["BlobsStorageOptions:ConnectionString"],
+    builder.Configuration["BlobsStorageOptions:ContainerName"]));
 
 // Add AgentApplicationOptions from config.
 builder.AddAgentApplicationOptions();
