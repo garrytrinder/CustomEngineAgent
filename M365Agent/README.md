@@ -1,21 +1,111 @@
-# Welcome to Microsoft 365 Agents Toolkit!
+# Updated Echo Bot template for building Custom Engine Agents for Microsoft 365 Copilot
 
-## Quick Start
-1. Press F5, or select Debug > Start Debugging menu in Visual Studio to start your app
-</br>![image](https://raw.githubusercontent.com/OfficeDev/TeamsFx/dev/docs/images/visualstudio/debug/debug-button.png)
-2. In Microsoft 365 Agents Playground, type and send anything to your bot to get a response
+This repository contains an updated version of the Echo Bot template, which is designed to help developers build Custom Engine Agents for Microsoft 365 Copilot. The template has been enhanced with additional features and improvements to streamline the development process.
 
+It demonstrates how to:
 
-## Run the app on other platforms
+- Stream responses
+- Add citations
+- Authenticate users
+- Use conversation state
 
-The Teams app can run in other platforms like Outlook and Microsoft 365 app. See https://aka.ms/vs-ttk-debug-multi-profiles for more details.
+It stops short of including an orchestration layer, such as Semantic Kernel, leaving the choice of orchestration framework up to the developer, allowing for flexibility in how agents are built and integrated.
 
-## Get more info
+## Requirements
 
-New to Teams app development or Microsoft 365 Agents Toolkit? Explore Teams app manifests, cloud deployment, and much more in the https://aka.ms/teams-toolkit-vs-docs.
+- Visual Studio 2022 17.14 or later
+- Microsoft 365 Agents Toolkit component
+- Azure subscription
+- Microsoft 365 tenant with custom app upload enabled
 
-## Report an issue
+## Minimal steps to awesome
 
-Select Visual Studio > Help > Send Feedback > Report a Problem. 
-Or, create an issue directly in our GitHub repository:
-https://github.com/OfficeDev/TeamsFx/issues
+1. **Clone the repository**: Download the code to your local machine.
+1. **Open the solution in Visual Studio**: Use Visual Studio 2022 17.14 or later to open the solution.
+1. **Create local environment file**: In env folder in the M365Agents project, rename `env.local.sample` to `env.local` 
+1. **Configure a dev tunnel**: Set up a Dev Tunnel for local testing, create a permanent public tunnel.
+1. **Start a debug session**: Select Microsoft Teams (browser) profile and start a debug session. Follow the prompts to provision the resources.
+1. **Install the app in Teams**: After provisioning, in the launched browser install the app in Microsoft Teams and select Open in Copilot to test the agent in Microsoft 365 Copilot.
+1. **Create service principal for bot app registration**: Open a browser and navigate to the Azure portal, open the Azure Bot Service resource created during proviosioning and on the overview page, select `Create service principal`, this may take a few moments to complete. 
+1. **Test the agent**: In Microsoft 365 Copilot, open the agent and send a prompt.
+
+## Deploy to Azure
+
+This template has been updated to be more suitable for production environments.
+
+- Azure Bot Service configured with User Assigned Managed Identity
+- Azure Blob Storage for persistent storage of conversation state
+- Azure Key Vault for secure secret management
+- Application Insights for monitoring and telemetry
+
+To deploy the bot to Azure, follow these steps:
+
+1. Right click the M365Agents project, expand Microsoft 365 Agents Toolkit menu and select `Provision in the Cloud...`, select subscription, resource group and region, then select Provision. 
+2. Right click the M365Agents project, expand Microsoft 365 Agents Toolkit menu and select `Deploy to the Cloud`.
+3. Right click the M365Agents project, expand Microsoft 365 Agents Toolkit menu, expand `Zip App Package` and select `For Azure`. In the file picker, select the `manifest.json` file and select `Open`.
+
+Two options for deploying the app package to Microsoft 365:
+
+1. Sideload, upload the app into Microsoft Teams from Manage my apps.
+2. Deploy the app to the organization, Upload the app package in the Integrated Apps section of the Microsoft 365 Admin Center.
+
+## Improvements
+
+### **Initial Setup & Configuration**
+- Excluded M365Agents folder from web app project
+- Updated app manifest schema from v1.21 to v1.22
+- Added `copilot` scope to bots and commandLists
+- Added `copilotAgents` and `customEngineAgents` properties to manifest
+- Removed duplicate MemoryStorage registration in Program.cs
+
+### **Code Structure Improvements**
+- Replaced constructor-based handler registration with route decorators
+- Removed welcome message functionality (not supported in Microsoft 365 Copilot)
+- Updated EchoBot class to use primary constructor pattern
+- Added `[Route]` decorator to OnMessageAsync method
+
+### **Response Enhancements**
+- Implemented streaming responses with `StreamingResponse.QueueTextChunk()`
+- Added informative update messages during processing
+- Enabled message counting using conversation state
+- Added citation support with `Citation` objects
+- Enabled "Generated by AI" label for citations
+
+### **Authentication & Security**
+- Replaced Bot Framework registration with Azure Bot Service registration
+- Updated app registration to single tenant (`AzureADMyOrg`)
+- Added Microsoft Graph API integration with OAuth 2.0
+- Implemented user authentication with on-behalf-of flow
+- Added `[SignInHandlers]` to route decorators
+- Created dedicated app registration for Graph API access
+
+### **Infrastructure Changes**
+- Migrated from dev.botframework.com to Azure Bot Service
+- Added Bicep templates for Azure resource deployment
+- Implemented Azure Key Vault for secure secret storage
+- Added managed identity for authentication
+- Created bot service connections for Microsoft Graph
+
+### **Storage & State Management**
+- Replaced MemoryStorage with persistent Azure Blob Storage
+- Added BlobsStorage configuration with connection strings
+- Implemented conversation state extensions for message counting
+- Added Azurite emulator support for local development
+
+### **Development Experience**
+- Added multiple launch profiles for different environments
+- Created Microsoft 365 Copilot-specific launch configurations
+- Added Dev Tunnels integration for local testing
+- Updated environment variable management across multiple files
+
+### **Deployment & Provisioning**
+- Complete overhaul of provisioning pipeline in m365agents.yml
+- Added comprehensive Bicep templates for production deployment
+- Integrated Application Insights for monitoring
+- Added automated app package generation and deployment options
+
+### **Manifest & App Package**
+- Added `webApplicationInfo` and `validDomains` for authentication
+- Updated bot service connection configurations
+- Added support for conversation starters (though not displayed in playground)
+- Removed Teams-specific scopes where appropriate for Copilot-only scenarios
