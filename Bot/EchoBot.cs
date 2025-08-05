@@ -26,7 +26,7 @@ public class EchoBot(AgentApplicationOptions options) : AgentApplication(options
         await turnContext.StreamingResponse.EndStreamAsync(cancellationToken);
     }
 
-    [Route(RouteType = RouteType.Message, Type = ActivityTypes.Message, Text = "-out")]
+    [Route(RouteType = RouteType.Message, Type = ActivityTypes.Message, Text = "-reset")]
     protected async Task SignOut(ITurnContext turnContext, ITurnState turnState, CancellationToken cancellationToken) {
         await UserAuthorization.SignOutUserAsync(turnContext, turnState, "me",cancellationToken: cancellationToken);
         await turnContext.SendActivityAsync("You have been signed out.", cancellationToken: cancellationToken);
