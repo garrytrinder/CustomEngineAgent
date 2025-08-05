@@ -27,9 +27,10 @@ public class EchoBot(AgentApplicationOptions options) : AgentApplication(options
     }
 
     [Route(RouteType = RouteType.Message, Type = ActivityTypes.Message, Text = "-reset")]
-    protected async Task SignOut(ITurnContext turnContext, ITurnState turnState, CancellationToken cancellationToken) {
-        await UserAuthorization.SignOutUserAsync(turnContext, turnState, "me",cancellationToken: cancellationToken);
-        await turnContext.SendActivityAsync("You have been signed out.", cancellationToken: cancellationToken);
+    protected async Task Reset(ITurnContext turnContext, ITurnState turnState, CancellationToken cancellationToken) {
+        await UserAuthorization.SignOutUserAsync(turnContext, turnState, "me", cancellationToken: cancellationToken);
+        turnState.Conversation.SetValue("count", 0);
+        await turnContext.SendActivityAsync("State and auth reset", cancellationToken: cancellationToken);
     }
 
     private static async Task<string> GetGivenName(string accessToken, CancellationToken cancellationToken)
