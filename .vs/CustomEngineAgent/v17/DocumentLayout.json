@@ -1,0 +1,215 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\garrytrinder\\source\\repos\\CustomEngineAgent\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{B069B3BD-F6BC-CC40-82AB-3FCC2EA50FDF}|M365Agent\\M365Agent.atkproj|c:\\users\\garrytrinder\\source\\repos\\customengineagent\\m365agent\\env\\.env.local||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{B069B3BD-F6BC-CC40-82AB-3FCC2EA50FDF}|M365Agent\\M365Agent.atkproj|solutionrelative:m365agent\\env\\.env.local||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B069B3BD-F6BC-CC40-82AB-3FCC2EA50FDF}|M365Agent\\M365Agent.atkproj|c:\\users\\garrytrinder\\source\\repos\\customengineagent\\m365agent\\apppackage\\manifest.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{B069B3BD-F6BC-CC40-82AB-3FCC2EA50FDF}|M365Agent\\M365Agent.atkproj|solutionrelative:m365agent\\apppackage\\manifest.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B069B3BD-F6BC-CC40-82AB-3FCC2EA50FDF}|M365Agent\\M365Agent.atkproj|c:\\users\\garrytrinder\\source\\repos\\customengineagent\\m365agent\\m365agents.local.yml||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{B069B3BD-F6BC-CC40-82AB-3FCC2EA50FDF}|M365Agent\\M365Agent.atkproj|solutionrelative:m365agent\\m365agents.local.yml||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A0E52601-C5AB-0604-E39D-7D71EC487C7B}|CustomEngineAgent.csproj|c:\\users\\garrytrinder\\source\\repos\\customengineagent\\bot\\echobot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A0E52601-C5AB-0604-E39D-7D71EC487C7B}|CustomEngineAgent.csproj|solutionrelative:bot\\echobot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B069B3BD-F6BC-CC40-82AB-3FCC2EA50FDF}|M365Agent\\M365Agent.atkproj|c:\\users\\garrytrinder\\source\\repos\\customengineagent\\m365agent\\env\\.env.local.user||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{B069B3BD-F6BC-CC40-82AB-3FCC2EA50FDF}|M365Agent\\M365Agent.atkproj|solutionrelative:m365agent\\env\\.env.local.user||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A0E52601-C5AB-0604-E39D-7D71EC487C7B}|CustomEngineAgent.csproj|c:\\users\\garrytrinder\\source\\repos\\customengineagent\\properties\\servicedependencies.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A0E52601-C5AB-0604-E39D-7D71EC487C7B}|CustomEngineAgent.csproj|solutionrelative:properties\\servicedependencies.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A0E52601-C5AB-0604-E39D-7D71EC487C7B}|CustomEngineAgent.csproj|c:\\users\\garrytrinder\\source\\repos\\customengineagent\\properties\\servicedependencies.local.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A0E52601-C5AB-0604-E39D-7D71EC487C7B}|CustomEngineAgent.csproj|solutionrelative:properties\\servicedependencies.local.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A0E52601-C5AB-0604-E39D-7D71EC487C7B}|CustomEngineAgent.csproj|c:\\users\\garrytrinder\\source\\repos\\customengineagent\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A0E52601-C5AB-0604-E39D-7D71EC487C7B}|CustomEngineAgent.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A0E52601-C5AB-0604-E39D-7D71EC487C7B}|CustomEngineAgent.csproj|c:\\users\\garrytrinder\\source\\repos\\customengineagent\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A0E52601-C5AB-0604-E39D-7D71EC487C7B}|CustomEngineAgent.csproj|solutionrelative:appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B069B3BD-F6BC-CC40-82AB-3FCC2EA50FDF}|M365Agent\\M365Agent.atkproj|c:\\users\\garrytrinder\\source\\repos\\customengineagent\\m365agent\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{B069B3BD-F6BC-CC40-82AB-3FCC2EA50FDF}|M365Agent\\M365Agent.atkproj|solutionrelative:m365agent\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B069B3BD-F6BC-CC40-82AB-3FCC2EA50FDF}|M365Agent\\M365Agent.atkproj|c:\\users\\garrytrinder\\source\\repos\\customengineagent\\m365agent\\infra\\local.azure.bicep||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{B069B3BD-F6BC-CC40-82AB-3FCC2EA50FDF}|M365Agent\\M365Agent.atkproj|solutionrelative:m365agent\\infra\\local.azure.bicep||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 12,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": ".env.local.user",
+              "DocumentMoniker": "C:\\Users\\garrytrinder\\source\\repos\\CustomEngineAgent\\M365Agent\\env\\.env.local.user",
+              "RelativeDocumentMoniker": "M365Agent\\env\\.env.local.user",
+              "ToolTip": "C:\\Users\\garrytrinder\\source\\repos\\CustomEngineAgent\\M365Agent\\env\\.env.local.user",
+              "RelativeToolTip": "M365Agent\\env\\.env.local.user",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAkAQAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003464|",
+              "WhenOpened": "2025-08-05T10:30:44.193Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "serviceDependencies.json",
+              "DocumentMoniker": "C:\\Users\\garrytrinder\\source\\repos\\CustomEngineAgent\\Properties\\serviceDependencies.json",
+              "RelativeDocumentMoniker": "Properties\\serviceDependencies.json",
+              "ToolTip": "C:\\Users\\garrytrinder\\source\\repos\\CustomEngineAgent\\Properties\\serviceDependencies.json",
+              "RelativeToolTip": "Properties\\serviceDependencies.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-08-05T10:05:17.603Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "serviceDependencies.local.json",
+              "DocumentMoniker": "C:\\Users\\garrytrinder\\source\\repos\\CustomEngineAgent\\Properties\\serviceDependencies.local.json",
+              "RelativeDocumentMoniker": "Properties\\serviceDependencies.local.json",
+              "ToolTip": "C:\\Users\\garrytrinder\\source\\repos\\CustomEngineAgent\\Properties\\serviceDependencies.local.json",
+              "RelativeToolTip": "Properties\\serviceDependencies.local.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-08-05T10:05:16.538Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "EchoBot.cs",
+              "DocumentMoniker": "C:\\Users\\garrytrinder\\source\\repos\\CustomEngineAgent\\Bot\\EchoBot.cs",
+              "RelativeDocumentMoniker": "Bot\\EchoBot.cs",
+              "ToolTip": "C:\\Users\\garrytrinder\\source\\repos\\CustomEngineAgent\\Bot\\EchoBot.cs",
+              "RelativeToolTip": "Bot\\EchoBot.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAABqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-05T10:00:30.253Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "manifest.json",
+              "DocumentMoniker": "C:\\Users\\garrytrinder\\source\\repos\\CustomEngineAgent\\M365Agent\\appPackage\\manifest.json",
+              "RelativeDocumentMoniker": "M365Agent\\appPackage\\manifest.json",
+              "ToolTip": "C:\\Users\\garrytrinder\\source\\repos\\CustomEngineAgent\\M365Agent\\appPackage\\manifest.json",
+              "RelativeToolTip": "M365Agent\\appPackage\\manifest.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-08-04T10:48:32.518Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "C:\\Users\\garrytrinder\\source\\repos\\CustomEngineAgent\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "appsettings.Development.json",
+              "ToolTip": "C:\\Users\\garrytrinder\\source\\repos\\CustomEngineAgent\\appsettings.Development.json",
+              "RelativeToolTip": "appsettings.Development.json",
+              "ViewState": "AgIAABQAAABAzMzMzIwpwCkAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-08-05T09:49:42.147Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\garrytrinder\\source\\repos\\CustomEngineAgent\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\garrytrinder\\source\\repos\\CustomEngineAgent\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAgAAAAQMzMzM7MwwBQAAABBAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-05T09:36:31.825Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "m365agents.local.yml",
+              "DocumentMoniker": "C:\\Users\\garrytrinder\\source\\repos\\CustomEngineAgent\\M365Agent\\m365agents.local.yml",
+              "RelativeDocumentMoniker": "M365Agent\\m365agents.local.yml",
+              "ToolTip": "C:\\Users\\garrytrinder\\source\\repos\\CustomEngineAgent\\M365Agent\\m365agents.local.yml",
+              "RelativeToolTip": "M365Agent\\m365agents.local.yml",
+              "ViewState": "AgIAAE4AAACAyszMzIwgwHUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003775|",
+              "WhenOpened": "2025-08-05T09:32:50.15Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "local.azure.bicep",
+              "DocumentMoniker": "C:\\Users\\garrytrinder\\source\\repos\\CustomEngineAgent\\M365Agent\\infra\\local.azure.bicep",
+              "RelativeDocumentMoniker": "M365Agent\\infra\\local.azure.bicep",
+              "ToolTip": "C:\\Users\\garrytrinder\\source\\repos\\CustomEngineAgent\\M365Agent\\infra\\local.azure.bicep",
+              "RelativeToolTip": "M365Agent\\infra\\local.azure.bicep",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-08-01T19:25:04.99Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\garrytrinder\\source\\repos\\CustomEngineAgent\\M365Agent\\launchSettings.json",
+              "RelativeDocumentMoniker": "M365Agent\\launchSettings.json",
+              "ToolTip": "C:\\Users\\garrytrinder\\source\\repos\\CustomEngineAgent\\M365Agent\\launchSettings.json",
+              "RelativeToolTip": "M365Agent\\launchSettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-08-04T13:01:12.168Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": ".env.local",
+              "DocumentMoniker": "C:\\Users\\garrytrinder\\source\\repos\\CustomEngineAgent\\M365Agent\\env\\.env.local",
+              "RelativeDocumentMoniker": "M365Agent\\env\\.env.local",
+              "ToolTip": "C:\\Users\\garrytrinder\\source\\repos\\CustomEngineAgent\\M365Agent\\env\\.env.local",
+              "RelativeToolTip": "M365Agent\\env\\.env.local",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-08-01T19:23:36.865Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
